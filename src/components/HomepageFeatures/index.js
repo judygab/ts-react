@@ -71,14 +71,14 @@ const codeSnippetsList = [
     codeBlock: `
     type CardProps = {
       title: string,
-      paragraph?: string  // the paragraph is optional
+      description?: string  // the description is optional
     }
 
-    export const Card: FunctionComponent<CardProps> = ({ title = "Hello", paragraph }) =>
+    export const Card: FunctionComponent<CardProps> = ({ title = "Hello", description }) =>
       <div>
         <h2>{ title }</h2>
         <p>
-          { paragraph }
+          { description }
         </p>
       </div>
     `
@@ -118,7 +118,7 @@ const codeSnippetsList = [
   {
     title: 'Custom Hooks',
     description: (
-      <>In custom hooks, we have to note that we need to also define return types. Since we return
+      <>In custom hooks, we have to keep in mind that we need to also define return types. Since we return
       one or more elements in the array, if we don't properly define each element type in order,
       we will get a Type Error, because TypeScript assumes all elements of the array to be of the same type,
       unless explicitely declared.
