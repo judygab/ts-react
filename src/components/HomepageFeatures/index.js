@@ -69,12 +69,14 @@ const codeSnippetsList = [
       </>
     ),
     codeBlock: `
+    import React from "react";
+
     type CardProps = {
       title: string,
       description?: string  // the description is optional
     }
 
-    export const Card: FunctionComponent<CardProps> = ({ title = "Hello", description }) =>
+    export const Card: Reacat.FC<CardProps> = ({ title = "Hello", description }) =>
       <div>
         <h2>{ title }</h2>
         <p>
@@ -93,7 +95,7 @@ const codeSnippetsList = [
   ),
   codeBlock: (
     `
-    export const Button: FunctionComponent<CardProps> = ({ title, onClick } : {
+    export const Button = ({ title, onClick } : {
       title: string,
       onClick: () => void
     }) =>
